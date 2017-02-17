@@ -2,8 +2,12 @@
   <a href="/products">Craftsy</a>
 </div>
 <div class="well centerHeader">
+  <% if current_user %>
+    <% if current_user.admin?%>
   <%= link_to "Create New product", new_product_path, :class => "bigLink"%>
   <br><br>
+  <% end %>
+  <% end %>
   <% if @products.any? %>
   <div class="row" id="topMargin">
     <% @products.each do |product| %>
