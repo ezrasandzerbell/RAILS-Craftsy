@@ -24,7 +24,7 @@ body {
    margin-top: 10%;
    margin-bottom: 25%;
    position: relative;
-   padding-right: 3%;
+   padding: 3%;
 }
 
 .homeStyle {
@@ -40,14 +40,14 @@ body {
   }
 }
 
-.product-apperance {
-  padding: 0;
-  padding: 25px 25px;
+.card-image {
+  height: 250px;
 }
 
 #topMargin {
   padding-top: 30px;
   padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
