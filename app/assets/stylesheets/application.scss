@@ -1,0 +1,18 @@
+@import "materialize";
+
+body {
+  background-image: url("backgroundimg.jpeg");
+  width: 100vw;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+.well {
+   background-color: rgba(245, 245, 245, 0.5);
+   height: 60vh;
+   margin-top: 10%;
+}
