@@ -23,6 +23,9 @@
         <% if @reviews.any? %>
           <% @reviews.each do |review| %>
             <h5><%= review.title %> </h5>
+            <% if current_user.admin?%>
+            <%= link_to "Delete Review", product_review_path(@product, review), :data => {:confirm => "Are you sure?",:method => "delete"} %>
+            <% end %>
             by <i><%= review.name %></i> (<%= review.created_at %>)
             <br>
             <%= review.content %>
