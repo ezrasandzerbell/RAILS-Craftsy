@@ -10,7 +10,7 @@
     <div class="col m4">
       <div class="card">
         <div class="card-image">
-            <%= image_tag product.imgfile %>
+            <a href="/products/<%= product.id %>"><%= image_tag product.imgfile %></a>
         </div>
         <div class="card-content">
           <span class="card-title"> <%= product.name %> </span>
