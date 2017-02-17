@@ -17,13 +17,27 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text">Craftsy</h5>
+                <p class="grey-text text-lighten-4">Handmade Crafts and Couture</p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+
+                  <% if current_user %>
+                  <li style="color: white;"><%= current_user.email %></li>
+                  <% end %>
+
+                  <li><a href="/" class=" logo-size">Home Page</a></li>
+
+                  <% if current_user %>
+                  <li><%= link_to "View My Products", products_path, :class => 'main-links' %> </li>
+                    <li><%= link_to "Log-out", destroy_user_session_path, method: "delete" %></li>
+                  </div>
+                  <% else %>
+                      <li>  <%= link_to "Log-in", new_user_session_path %> | <%= link_to "Signup", new_user_registration_path %></li>
+                    </div>
+                  <% end %>
                 </ul>
               </div>
             </div>

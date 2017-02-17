@@ -38,7 +38,6 @@ body {
 .bigLink {
   font-size: 50px;
   color: black;
-  margin-left: 25%;
 }
 
 .bgWhite {
@@ -50,6 +49,9 @@ body {
 .centerHeader {
   padding-top: 25px;
   text-align: center;
+  a {
+    text-align: center;
+  }
 }
 
 .resizeImg {
@@ -73,4 +75,8 @@ body {
   a:active {
     color: white;
   }
+}
+
+a {
+  color: white;
 }
