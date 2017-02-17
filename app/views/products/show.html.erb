@@ -15,13 +15,18 @@
           <% end %>
         <% end %>
         <div class="well">
-        <%= link_to "Add a review", new_product_review_path(@product) %>
+          <h2 style="text-align: center; color: white;">Product Reviews</h2>
+        <h5 style="text-align: center;"><%= link_to "Add a review", new_product_review_path(@product) %></h5>
+
+        <br><br>
 
         <% if @reviews.any? %>
           <% @reviews.each do |review| %>
-            <%= review.title %>
+            <h5><%= review.title %> </h5>
+            by <i><%= review.name %></i> (<%= review.created_at %>)
             <br>
             <%= review.content %>
+            <br><br>
           <% end %>
         <% end %>
         </div>
