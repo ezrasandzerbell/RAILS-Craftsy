@@ -1,9 +1,9 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
 
   def index
-
-    @user = current_user
-    @products = @user.products
+    @products = Product.all
+    # @user = current_user
+    # @products = @user.products
   end
 
   def show
@@ -50,6 +50,4 @@ private
   def product_params
     params.require(:product).permit(:title, :details, :imgfile)
   end
-end
-
 end

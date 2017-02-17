@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :reviews
   end
-  get '/show', to: 'home#show', as: 'show'
-  
+
   root to: 'home#index'
 end
