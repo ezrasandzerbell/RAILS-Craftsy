@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(:name => product_params[:name], :details => product_params[:details], :cost => product_params[:cost], :imgfile => product_params[:imgfile])
+    @product = Product.new(:name => product_params[:name], :details => product_params[:details], :cost => product_params[:cost], :imgfile => product_params[:imgfile], :user_id => current_user.id)
     if @product.save
       flash[:notice] = "Product added!"
       redirect_to products_path
