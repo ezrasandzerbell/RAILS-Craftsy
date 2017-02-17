@@ -10,17 +10,19 @@
     <div class="col m4">
       <div class="card">
         <div class="card-image">
-          <%= image_tag product.imgfile %>
-
-          <a href="/products/<%= product.id %>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">info_outline</i></a>
+            <%= image_tag product.imgfile %>
         </div>
         <div class="card-content">
-          <span class="card-title"> <%= product.name %></span>
+          <span class="card-title"> <%= product.name %> </span>
           <p><%= product.details %></p>
+          <br><span>
+
           <div class="chip">
 
             <%= product.cost %>
           </div>
+          <a href="/products/<%= product.id %>" class="btn-floating waves-effect waves-light red"><i class="material-icons">info_outline</i></a>
+        </span>
         </div>
       </div>
     </div>
