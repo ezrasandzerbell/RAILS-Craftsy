@@ -1,0 +1,16 @@
+<div class="siteTitle">
+  <a href="/products">Craftsy</a>
+</div>
+
+<div class="well">
+  <div class="card">
+    <div class="card-image resizeImg">
+      <%= image_tag @product.imgfile %>
+    </div>
+    <div class="card-content">
+      <span class="card-title"> <%= @product.name %> <%= @product.cost %> <span class="floatRight"> <%= link_to "Edit Product", edit_product_path %>  |  <%= link_to "Delete Product", product_path, :data => {:confirm => "Are you sure?",:method => "delete"} %></span></span>
+
+      <p><%= @product.details %></p>
+    </div>
+  </div>
+</div>

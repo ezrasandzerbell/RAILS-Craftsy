@@ -34,3 +34,43 @@ body {
   padding-top: 30px;
   padding-left: 30px;
 }
+
+.bigLink {
+  font-size: 50px;
+  color: black;
+  margin-left: 25%;
+}
+
+.bgWhite {
+  background-color: white;
+  margin: 35px;
+  padding: 15px;
+}
+
+.centerHeader {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.resizeImg {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.floatRight {
+  float: right;
+  font-size: 25px;
+}
+
+.siteTitle {
+  font-size: 10em;
+  color: white;
+  text-align: center;
+  margin-bottom: -80px;
+  a:visited {
+    color: white;
+  }
+  a:active {
+    color: white;
+  }
+}

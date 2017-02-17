@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(:name => product_params[:name], :details => product_params[:details], :cost => product_params[:cost], :imgfile => product_params[:imgfile], :user_id => current_user.id)
+    @product = Product.new(:name => product_params[:name], :details => product_params[:details], :cost => product_params[:cost], :imgfile => product_params[:imgfile])
     if @product.save
       flash[:notice] = "Product added!"
       redirect_to products_path
@@ -48,6 +48,6 @@ class ProductsController < ApplicationController
 
 private
   def product_params
-    params.require(:product).permit(:title, :details, :imgfile)
+    params.require(:product).permit(:name, :details, :cost, :imgfile)
   end
 end

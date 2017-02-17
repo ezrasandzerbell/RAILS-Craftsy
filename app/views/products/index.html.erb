@@ -1,4 +1,9 @@
+<div class="siteTitle">
+  <a href="/products">Craftsy</a>
+</div>
 <div class="well">
+  <%= link_to "Create New product", new_product_path, :class => "bigLink"%>
+  <br><br>
   <% if @products.any? %>
   <div class="row" id="topMargin">
     <% @products.each do |product| %>
@@ -7,11 +12,15 @@
         <div class="card-image">
           <%= image_tag product.imgfile %>
 
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">info_outline</i></a>
+          <a href="/products/<%= product.id %>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">info_outline</i></a>
         </div>
         <div class="card-content">
           <span class="card-title"> <%= product.name %></span>
           <p><%= product.details %></p>
+          <div class="chip">
+
+            <%= product.cost %>
+          </div>
         </div>
       </div>
     </div>

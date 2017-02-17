@@ -1,0 +1,15 @@
+<div class="well bgWhite">
+  
+  <%= form_for @product do |f| %>
+    <%= f.label :name,'Product Name' %>
+    <%= f.text_field :name, :class => 'form-control' %>
+    <%= f.label :details,'Product Details' %>
+    <%= f.text_field :details, :class => 'form-control' %>
+    <%= f.label :cost,'Product Cost' %>
+    <%= f.text_field :cost, :class => 'form-control' %>
+    <%= f.label :imgfile, 'Image File' %>
+    <%= f.file_field :imgfile %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
