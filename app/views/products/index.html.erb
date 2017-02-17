@@ -7,7 +7,7 @@
   <% if @products.any? %>
   <div class="row" id="topMargin">
     <% @products.each do |product| %>
-    <div class="col m4">
+    <div class="product-apperance col m4">
       <div class="card">
         <div class="card-image">
           <%= image_tag product.imgfile %>
@@ -26,7 +26,7 @@
     </div>
     <% end %>
   <% end %>
-</div>
+  </div>
 
 
 
