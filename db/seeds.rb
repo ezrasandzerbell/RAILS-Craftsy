@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 admin = User.create(email: 'hello@test.com', name: 'Admin', password: 'password', admin: true)
+product = Product.create(name: 'hat', details: 'red sports hat', cost: '$12.00', imgfile:  File.new(Rails.root.join('spec', 'fixtures', 'images', 'hat.jpg')))
