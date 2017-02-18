@@ -4,7 +4,7 @@
 <div class="well centerHeader">
   <% if current_user %>
     <% if current_user.admin?%>
-  <%= link_to "Create New product", new_product_path, :class => "bigLink"%>
+  <%= link_to "Create New Product", new_product_path, :class => "bigLink"%>
   <br><br>
   <% end %>
   <% end %>
@@ -14,7 +14,7 @@
     <div class="col m4">
       <div class="card">
         <div class="card-image">
-            <a href="/products/<%= product.id %>"><%= image_tag product.imgfile %></a>
+            <a href="/products/<%= product.id %>"><%= image_tag product.imgfile, :class => "thisImage"  %></a>
         </div>
         <div class="card-content">
           <span class="card-title"> <%= product.name %> </span>

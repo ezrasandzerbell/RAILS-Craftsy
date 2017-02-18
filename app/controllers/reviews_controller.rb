@@ -16,28 +16,12 @@ class ReviewsController < ApplicationController
       @review.name = @product.user.name
       if @review.save
         flash[:notice] = "Review added!"
-        redirect_to products_path
+        redirect_to product_path(@product)
       else
         flash[:notice] = "Review not added!"
         render :new
       end
     end
-
-    def edit
-       @product = Product.find(params[:product_id])
-        @review = Review.find(params[:id])
-      end
-
-      def update
-        @product = Product.find(params[:product_id])
-        @review = Review.find(params[:id])
-        if @review.update(review_params)
-          flash[:notice] = "Review updated!"
-          redirect_to product_path(@product.id)
-        else
-          render :edit
-        end
-      end
 
     def destroy
       @product = Product.find(params[:product_id])

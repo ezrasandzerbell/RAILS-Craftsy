@@ -5,36 +5,35 @@
 <div class="well">
   <div class="card">
     <div class="card-image resizeImg">
-      <%= image_tag @product.imgfile %>
+      <%= image_tag @product.imgfile%>
     </div>
     <div class="card-content">
       <span class="card-title centerText"> <%= @product.name %> <%= @product.cost %> | <%= @product.details %>
         <% if current_user %>
-          <% if current_user.admin?%>
-          | <%= link_to "Edit Product", edit_product_path %>  |  <%= link_to "Delete Product", product_path, :data => {:confirm => "Are you sure?",:method => "delete"} %></span>
+          <% if current_user.admin?%> | <%= link_to "Edit Product", edit_product_path %>  |  <%= link_to "Delete Product", product_path, :data => {:confirm => "Are you sure?",:method => "delete"} %></span>
           <% end %>
         <% end %>
         <div class="well">
           <h2 style="text-align: center; color: white;">Product Reviews</h2>
-        <h5 style="text-align: center;"><%= link_to "Add a review", new_product_review_path(@product) %></h5>
-
-        <br><br>
-
-        <% if @reviews.any? %>
-          <% @reviews.each do |review| %>
-            <h5><%= review.title %> </h5>
-            <% if current_user.admin?%>
-            <%= link_to "Delete Review", product_review_path(@product, review), :data => {:confirm => "Are you sure?",:method => "delete"} %>
+          <h5 style="text-align: center;"><%= link_to "Add a review", new_product_review_path(@product) %></h5>
+          <br><br> <h3 style="text-align: center; color: white;"><%= flash[:alert] %><%= flash[:notice] %></h3>
+          <br><br>
+          <% if @reviews.any? %>
+            <% @reviews.each do |review| %>
+              <h5><%= review.title %> </h5>
+              <% if current_user %>
+                <% if current_user.admin?%>
+                <%= link_to "Delete Review", product_review_path(@product, review), :data => {:confirm => "Are you sure?",:method => "delete"} %>
+                <% end %>
+              <% end %>
+              <br>
+              by <i><%= review.name %></i> (<%= review.created_at %>)
+              <br>
+              <%= review.content %>
+              <br><br>
             <% end %>
-            by <i><%= review.name %></i> (<%= review.created_at %>)
-            <br>
-            <%= review.content %>
-            <br><br>
           <% end %>
-        <% end %>
         </div>
-
-
     </div>
   </div>
 </div>

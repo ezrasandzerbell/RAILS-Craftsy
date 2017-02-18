@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Review, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+# unit testing spec
+
+describe Review do
+  it { should validate_presence_of :title }
+  it { should validate_presence_of :content }
+  it { should belong_to :product }
 end
