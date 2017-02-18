@@ -12,6 +12,7 @@ _This app allows users to create user accounts, add/view products, and add revie
 Configuration:
 
 * $ postgres
+* $ bundle 
 * $ Rails db:create
 * $ Rails db:seed
 * $ Rails db:migrate
