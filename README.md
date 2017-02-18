@@ -1,24 +1,34 @@
-# README
+# _Craftsy (Home Crafts Shop Demo)_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _User Authentication (User + Admin) for a homemade crafts store_
 
-Things you may want to cover:
+#### By _**Ezra Sandzer-Bell**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_This app allows users to create user accounts, add/view products, and add reviews to each product. Admins can edit/delete products and delete reviews. Built with Ruby on Rails (5.0.1)_
 
-* Configuration
 
-* Database creation
+Configuration:
 
-* Database initialization
+* $ postgres
+* $ Rails db:create
+* $ Rails db:seed
+* $ Rails db:migrate
+* $ Rails db:test:prepare
+* $ Rails serve
+* $ rspec
 
-* How to run the test suite
+## Note to user
 
-* Services (job queues, cache servers, search engines, etc.)
+_If you want to login as admin and explore the added functionality, login with username "test@email.com" and password "password"._
 
-* Deployment instructions
+## Technologies Used
 
-* ...
+_This site was built with Ruby, Rails, ActiveRecord, Postgres, Rspec, Capybara, HTML, and CSS._
+
+### License
+
+*Open Source*
+
+Copyright (c) 2016 **_Ezra Sandzer-Bell_**
